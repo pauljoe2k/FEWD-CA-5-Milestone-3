@@ -27,6 +27,11 @@ const BooksList = ({ books }) => {
             }}
           />
           {/* Task 5.2: Use truncateText to display the book's authors */}
+          <p
+            dangerouslySetInnerHTML={{
+              __html: truncateText(book.author.join(' '), 3),
+            }}
+          />
           <p className="free">Free</p>
         </div>
       ))}

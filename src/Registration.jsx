@@ -4,7 +4,12 @@ import './App.css';
 const Register = ({ onSuccessfulRegistration }) => {
   // Task 3: Define State Variables
   // Hint: Define state variables to manage user input fields (name, email, password, repeatPassword).
-  // const [user, setUser] = useState({})
+  const [user, setUser] = useState({
+    name:'',
+    email:'',
+    password:'',
+    repeatPassword:''
+  })
 
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [formValid, setFormValid] = useState(true);
@@ -18,13 +23,17 @@ const Register = ({ onSuccessfulRegistration }) => {
     // Hint: Implement validation checks for each input field (name, email). Password validation is given as an example.
     // Use these checks to determine if the form is valid and update the formValid state accordingly.
 
+
     // Example validation functions
     const isNameValid = (name) => {
       // Check if name is valid
+      return name.trim().length>0
+     
     };
 
     const isEmailValid = (email) => {
-      // Check if email is valid
+      // Check if email is valid4
+      
     };
 
     const hasTenOrMoreChars = (str) => str.length >= 10;
